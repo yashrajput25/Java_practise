@@ -32,6 +32,28 @@ public class StreamPractise {
             return 5 * x;
         }).collect(Collectors.toList());
         System.out.println(q3);
+
+
+        //Q4
+        List<Integer> q4 = nums.stream().filter(x->x%2==0)
+                .map(x->x*10)
+                .collect(Collectors.toList());
+        System.out.println(q4);
+
+
+        //Q5
+        List<String> names = new ArrayList<>();
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Charlie");
+        names.add("David");
+        names.add("Tom");
+
+        List<String> q5 = names.stream()
+                .filter(x -> x.length() > 4)
+                .map(x-> x.toUpperCase())
+                .collect(Collectors.toList());
+        System.out.println(q5);
     }
     
 }
